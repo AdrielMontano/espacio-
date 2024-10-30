@@ -1,0 +1,159 @@
+/* Configuración general del fondo */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: #0b0b45;
+    background-image: url('img/uni3.jpg'); /* Fondo de universo */
+    background-size: cover;
+    background-attachment: fixed;
+    color: #ffffff;
+}
+
+.universe {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+/* Tierra */
+.earth {
+    position: absolute;
+    bottom: 20px;
+    left: 10%;
+    width: 100px;
+    height: 100px;
+    background-color: #4285f4;
+    border-radius: 50%;
+    box-shadow: 0 0 15px #1c1c3c;
+}
+
+/* Planeta destino */
+.destination-planet {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 120px;
+    height: 120px;
+    background-color: #ab47bc;
+    border-radius: 50%;
+    box-shadow: 0 0 20px #ab47bc;
+}
+
+/* Nave espacial */
+.rocket {
+    position: absolute;
+    bottom: 80px;
+    left: 10%;
+    width: 30px;
+    height: 60px;
+    transition: all 5s ease-in-out;
+}
+
+.rocket-body {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.rocket-window {
+    width: 10px;
+    height: 10px;
+    background-color: #42a5f5;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Llamas de la nave en forma de corazones */
+.rocket-flame {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: transparent;
+    animation: flame-animation 1s infinite linear;
+    transform: translateX(-50%);
+}
+
+.heart {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff4081;
+    transform: rotate(45deg);
+    animation: float-up 2s ease-out infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff4081;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -5px;
+    left: 0;
+}
+
+.heart::after {
+    left: 5px;
+    top: 0;
+}
+
+@keyframes flame-animation {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+@keyframes float-up {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+}
+
+/* Estilos del botón */
+.launch-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #6a1b9a;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px #ab47bc, 0px 0px 20px #42a5f5;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.launch-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px #fdd835, 0px 0px 25px #42a5f5;
+}

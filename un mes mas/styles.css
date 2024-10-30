@@ -1,0 +1,62 @@
+/* Configuración general del cuerpo con fondo de universo */
+body {
+    background-color: #0b0b45; /* Azul oscuro espacial */
+    background-image: url('img/uni2.avif'); /* Imagen de fondo del universo */
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #d1d1e9; /* Color claro para texto */
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+}
+
+/* Estilo del título con sombra */
+header h1 {
+    color: #ffffff; /* Blanco para resaltar en fondo oscuro */
+    font-size: 3em;
+    text-shadow: 0 0 8px #42a5f5, 0 0 10px #ab47bc; /* Efecto brillante */
+}
+
+/* Estilo de la imagen con bordes redondeados y animación al pasar el cursor */
+.animated-image img {
+    opacity: 0.9;
+    width: 599px;
+    height: auto;
+    border-radius: 20px; /* Bordes redondeados */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    box-shadow: 0 0 15px #1c1c3c; /* Sombra para dar efecto espacial */
+}
+
+.animated-image img:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+/* Estilo de texto en párrafos con colores espaciales */
+.content p:nth-child(1) {
+    color: #42a5f5; /* Azul brillante */
+}
+
+.content p:nth-child(2) {
+    color: #ab47bc; /* Púrpura cósmico */
+}
+
+.content p:nth-child(3) {
+    color: #fdd835; /* Amarillo estelar */
+}
+
+/* Estilo personalizado para botón con temática espacial */
+.btn-space {
+    background-color: #6a1b9a; /* Púrpura oscuro */
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px #ab47bc, 0px 0px 20px #42a5f5;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-space:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px #fdd835, 0px 0px 25px #42a5f5;
+}
